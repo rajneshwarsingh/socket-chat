@@ -1,4 +1,4 @@
-# socketChat
+# Socket Chat
 This project is a straightforward chat application built using Socket.IO, offering both one-to-one and group chat functionalities. It leverages socket rooms to manage chat interactions effectively. Additionally, several APIs are created to support and enhance the overall chat module.
 
 ## What will you need
