@@ -1,0 +1,11 @@
+node_modules/
+dist/
+public/
+# exclude everything
+lib/db/db_dump/*
+lib/
+
+# exception to the rule
+!db_dump/.gitkeep
+!logs/.gitkeep
+.DS_Store

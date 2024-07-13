@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "6c8ad628-79a8-49b6-97ed-fc42d07bbdaf",
+		"name": "SocketChatAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33606016"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Shanker\",\n    \"userId\": \"6d8ca1cd-4981-4a0f-a710-445402007123\",\n    \"password\": \"Qwerty@123!!\",\n    \"profileUrl\": \"https://rajneshwar.com/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3005/api/v1/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"825e3aee-057c-40cc-8451-cc4188bd23d3\",\n    \"password\": \"Qwerty@123!!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3005/api/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ3aGVuIjoiMjAyNC0wNy0wM1QwNDo1ODoyOS45NDNaIiwidXNlcklkIjoiNjY4NDAwZGM5NzJhMTg4MjU0Yzc2MTdiIiwiaWF0IjoxNzE5OTgyNzA5LCJleHAiOjE3Mjc3NTg3MDl9.Tv-jGTxfdbd7FTQJbnx-LlEIbsuo7dvXBcmLF6rU51i7xIiJ3RFFApbBjTCKXbD2z3oCsqCbI2KhgWncEIxQHw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Ravi thakur\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3005/api/v1/user/825e3aee-057c-40cc-8451-cc4188bd23d3",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"825e3aee-057c-40cc-8451-cc4188bd23d3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ3aGVuIjoiMjAyNC0wNy0wM1QwNDo1ODoyOS45NDNaIiwidXNlcklkIjoiNjY4NDAwZGM5NzJhMTg4MjU0Yzc2MTdiIiwiaWF0IjoxNzE5OTgyNzA5LCJleHAiOjE3Mjc3NTg3MDl9.Tv-jGTxfdbd7FTQJbnx-LlEIbsuo7dvXBcmLF6rU51i7xIiJ3RFFApbBjTCKXbD2z3oCsqCbI2KhgWncEIxQHw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3005/api/v1/user/825e3aee-057c-40cc-8451-cc4188bd23d3",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"825e3aee-057c-40cc-8451-cc4188bd23d3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Room",
+			"item": [
+				{
+					"name": "Create room",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ3aGVuIjoiMjAyNC0wNy0wM1QwNDo1ODoyOS45NDNaIiwidXNlcklkIjoiNjY4NDAwZGM5NzJhMTg4MjU0Yzc2MTdiIiwiaWF0IjoxNzE5OTgyNzA5LCJleHAiOjE3Mjc3NTg3MDl9.Tv-jGTxfdbd7FTQJbnx-LlEIbsuo7dvXBcmLF6rU51i7xIiJ3RFFApbBjTCKXbD2z3oCsqCbI2KhgWncEIxQHw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"My Room2\",\n    \"description\":\"Room for chating\",\n    \"admins\":[\"6d8ca1cd-4981-4a0f-a710-445402007123\"],\n    \"roomType\":1,\n    \"members\":[\"6d8ca1cd-4981-4a0f-a710-445402007123\",\"825e3aee-057c-40cc-8451-cc4188bd23d3\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3005/api/v1/room",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"room"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Room",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ3aGVuIjoiMjAyNC0wNy0wM1QwNDo1ODoyOS45NDNaIiwidXNlcklkIjoiNjY4NDAwZGM5NzJhMTg4MjU0Yzc2MTdiIiwiaWF0IjoxNzE5OTgyNzA5LCJleHAiOjE3Mjc3NTg3MDl9.Tv-jGTxfdbd7FTQJbnx-LlEIbsuo7dvXBcmLF6rU51i7xIiJ3RFFApbBjTCKXbD2z3oCsqCbI2KhgWncEIxQHw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"My Room3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3005/api/v1/room/668506aeb570a6a6e9e6df1a",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"room",
+								"668506aeb570a6a6e9e6df1a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Room",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ3aGVuIjoiMjAyNC0wNy0wM1QwNDo1ODoyOS45NDNaIiwidXNlcklkIjoiNjY4NDAwZGM5NzJhMTg4MjU0Yzc2MTdiIiwiaWF0IjoxNzE5OTgyNzA5LCJleHAiOjE3Mjc3NTg3MDl9.Tv-jGTxfdbd7FTQJbnx-LlEIbsuo7dvXBcmLF6rU51i7xIiJ3RFFApbBjTCKXbD2z3oCsqCbI2KhgWncEIxQHw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3005/api/v1/room/825e3aee-057c-40cc-8451-cc4188bd23d3",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"room",
+								"825e3aee-057c-40cc-8451-cc4188bd23d3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "Messages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ3aGVuIjoiMjAyNC0wNy0wM1QwNDo1ODoyOS45NDNaIiwidXNlcklkIjoiNjY4NDAwZGM5NzJhMTg4MjU0Yzc2MTdiIiwiaWF0IjoxNzE5OTgyNzA5LCJleHAiOjE3Mjc3NTg3MDl9.Tv-jGTxfdbd7FTQJbnx-LlEIbsuo7dvXBcmLF6rU51i7xIiJ3RFFApbBjTCKXbD2z3oCsqCbI2KhgWncEIxQHw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3005/api/v1/messages?roomId=66851f35264cacda7f38f709&pageNum=1",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"messages"
+							],
+							"query": [
+								{
+									"key": "roomId",
+									"value": "66851f35264cacda7f38f709"
+								},
+								{
+									"key": "pageNum",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
